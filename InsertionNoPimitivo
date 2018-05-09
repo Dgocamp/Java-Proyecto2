@@ -1,0 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package insertion;
+
+/**
+ *
+ * @author UsuarioN°1000
+ */
+public class Insertion2 { //ordenar la clase persona por la edad de cada individuo por insertion
+    public void insertion2(Persona[] array,int n){
+        int i,j;
+        Persona aux;
+        for(i=0;i<n;i++){
+            aux=array[i];
+            j=i-1;
+            while(j>=0 && array[j].getEdad()>aux.getEdad()){
+                array[j+1]=array[j];
+                j=j-1;
+            }
+            array[j+1]=aux;
+        }
+        for(i=0;i<n;i++){
+          System.out.println(array[i]);
+      }
+        
+    }
+}
