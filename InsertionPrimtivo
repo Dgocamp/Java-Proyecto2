@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package insertion;
+
+/**
+ *
+ * @author UsuarioN°1000
+ */
+public class Insertion{
+    
+  
+    public void Insertion(int[] arreglo) { //ordena numeros por insertion
+        int auxiliar;
+        int contador1;
+        int contador2;
+        for(contador1=1;contador1<arreglo.length;contador1++){
+            auxiliar=arreglo[contador1];
+            for(contador2=contador1-1;contador2>=0&&arreglo[contador2]>auxiliar;contador2--){
+                arreglo[contador2+1]=arreglo[contador2];
+                arreglo[contador2]=auxiliar;
+            }
+        }
+    }
+    
+    public void Insertion(char[] arreglo){ //ordena letras por insertion
+        char auxiliar;
+        int contador1;
+        int contador2;
+        for(contador1=1;contador1<arreglo.length;contador1++){
+            auxiliar=arreglo[contador1];
+            for(contador2=contador1-1;contador2>=0&&arreglo[contador2]>auxiliar;contador2--){
+                arreglo[contador2+1]=arreglo[contador2];
+                arreglo[contador2]=auxiliar;
+            }
+        }
+    }
+
+    
+}
